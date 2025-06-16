@@ -1,7 +1,7 @@
 #import "@preview/basic-resume:0.2.8": *
 
 // Put your personal information here, replacing mine
-#let name = "Stephen Xu"
+#let name = "Mason Walker"
 #let location = "San Diego, CA"
 #let email = "stxu@hmc.edu"
 #let github = "github.com/stuxf"

@@ -1,79 +1,126 @@
-# Basic Resume
+# 📄 Typst Resume Template
 
-<div align="center">Version 0.2.8</div>
+A modular and customizable resume template built with [Typst](https://typst.app), enabling you to efficiently manage and generate tailored resumes for various job applications such as Data Scientist, UX Researcher, and more.
 
-This is a template for a simple resume. It is intended to be used as a good starting point for quickly crafting a standard resume that will properly be parsed by ATS systems. Inspiration is taken from [Jake's Resume](https://github.com/jakegut/resume) and [guided-resume-starter-cgc](https://typst.app/universe/package/guided-resume-starter-cgc/). I'm currently a college student and was unable to find a Typst resume template that fit my needs, so I wrote my own. I hope this template can be useful to others as well.
+## 🧰 Features
 
-## Sample Resume
+- **Modular Sections**: Organize your resume into distinct sections like education, work experience, publications, and skills.
+- **Multiple Resume Versions**: Easily create and manage different resume versions for specific job roles.
+- **Custom Styling**: Utilize Typst's powerful styling capabilities to personalize the appearance of your resumes.
+- **Automated Builds**: Streamline the compilation process using the provided `Justfile`.
 
-![example resume](https://raw.githubusercontent.com/stuxf/basic-typst-resume-template/main/example-resume.png)
 
-## Quick Start
+## 🚀 Getting Started
 
-A barebones resume looks like this, which you can use to get started.
+### Prerequisites
 
-```typst
-#import "@preview/basic-resume:0.2.8": *
+Install [Typst](https://typst.app/) on your system.
 
-// Put your personal information here, replacing mine
-#let name = "Stephen Xu"
+### Installation
+
+1. **Clone the Repository**
+
+```
+git clone https://github.com/yourusername/basic-typst-resume-template.git
+cd basic-typst-resume-template
+```
+
+2. **Compile a resume**
+
+Choose the resume version you want to compile:
+
+```
+typst compile main-data-scientist.typ -o output/data-scientist-resume.pdf
+```
+
+Replace `main-data-scientist.typ` with the desired main file for other roles.
+
+
+## 🛠️ Customization
+
+### Creating a New Resume Version
+
+1. **Create a New Configuration File**
+
+Add a new `.typ` file in the `config/` directory, e.g., `config/config-product-manager.typ`, containing role-specific details:
+
+```
+#let author = "Your Name"
+#let email = "your.email@example.com"
+#let phone = "(123) 456-7890"
 #let location = "San Diego, CA"
-#let email = "stxu@hmc.edu"
-#let github = "github.com/stuxf"
-#let linkedin = "linkedin.com/in/stuxf"
-#let phone = "+1 (xxx) xxx-xxxx"
-#let personal-site = "stuxf.dev"
+#let accent-color = "#1f77b4"
 
-#show: resume.with(
-  author: name,
-  // All the lines below are optional. 
-  // For example, if you want to to hide your phone number:
-  // feel free to comment those lines out and they will not show.
-  location: location,
+```
+
+2. **Create a New Work Section**
+
+Add a new work experience file in the `sections/` directory, e.g., `sections/work-product-manager.typ`, highlighting relevant experiences.
+
+3. **Create a New Main File**
+
+Add a new main Typst file at the root, e.g., `main-product-manager.typ`, and include the appropriate sections:
+
+```
+#import "macros.typ"
+#import "config/config-product-manager.typ"
+
+#resume(
+  author: author,
   email: email,
-  github: github,
-  linkedin: linkedin,
   phone: phone,
-  personal-site: personal-site,
-  accent-color: "#26428b",
-  font: "New Computer Modern",
-  paper: "us-letter",
-  author-position: left,
-  personal-info-position: left,
-)
+  location: location,
+  accent-color: accent-color,
+)[
+  #include "sections/education.typ"
+  #include "sections/work-product-manager.typ"
+  #include "sections/skills.typ"
+  #include "sections/publications.typ"
+]
 
-/*
-* Lines that start with == are formatted into section headings
-* You can use the specific formatting functions if needed
-* The following formatting functions are listed below
-* #edu(dates: "", degree: "", gpa: "", institution: "", location: "")
-* #work(company: "", dates: "", location: "", title: "")
-* #project(dates: "", name: "", role: "", url: "")
-* #extracurriculars(activity: "", dates: "")
-* There are also the following generic functions that don't apply any formatting
-* #generic-two-by-two(top-left: "", top-right: "", bottom-left: "", bottom-right: "")
-* #generic-one-by-two(left: "", right: "")
-*/
-== Education
+show page-footer: align(center)[set text(size: 9pt, fill: gray) #page-number]
 
-#edu(
-  institution: "Harvey Mudd College",
-  location: "Claremont, CA",
-  dates: dates-helper(start-date: "Aug 2023", end-date: "May 2027"),
-  degree: "Bachelor's of Science, Computer Science and Mathematics",
-)
-- Cumulative GPA: 4.0\/4.0 | Dean's List, Harvey S. Mudd Merit Scholarship, National Merit Scholarship
-- Relevant Coursework: Data Structures, Program Development, Microprocessors, Abstract Algebra I: Groups and Rings, Linear Algebra, Discrete Mathematics, Multivariable & Single Variable Calculus, Principles and Practice of Comp Sci
+```
 
-== Work Experience
+4. **Compile the New Resume**
 
-#work(
-  title: "Subatomic Shepherd and Caffeine Connoisseur",
-  location: "Atomville, CA",
-  company: "Microscopic Circus, Schrodinger's University",
-  dates: dates-helper(start-date: "May 2024", end-date: "Present"),
-)
-- more bullet points go here
+```
+typst compile main-product-manager.typ -o output/product-manager-resume.pdf
 
-// ... more headers and stuff below
+```
+
+## 📁 Project Structure
+
+```
+
+basic-typst-resume-template/
+├── macros.typ
+├── typst.toml
+├── .typstignore
+├── .gitignore
+├── LICENSE
+├── README.md
+├── CHANGELOG.md
+├── Justfile
+├── example-resume.pdf
+├── example-resume.png
+├── thumbnail.png
+├── sections/
+│   ├── education.typ
+│   ├── work-data-scientist.typ
+│   ├── work-ux-researcher.typ
+│   ├── publications.typ
+│   ├── presentations.typ
+│   └── skills.typ
+├── config/
+│   ├── config-academic.typ
+│   ├── config-industry.typ
+│   ├── config-data-scientist.typ
+│   └── config-ux-researcher.typ
+├── main-academic.typ
+├── main-industry.typ
+├── main-data-scientist.typ
+├── main-ux-researcher.typ
+└── output/
+
 ```
