@@ -1,5 +1,5 @@
 #let author = "Mason Walker"
 #let location = "San Diego, CA"
 #let email = "masonewalker@gmail.com"
-#let phone = "(209) 728-5288"
+#let phone = ""
 #let accent-color = "#26428b"

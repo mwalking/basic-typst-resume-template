@@ -15,8 +15,8 @@
   accent-color: "#000000",
   font: "New Computer Modern",
   paper: "us-letter",
-  author-font-size: 20pt,
-  font-size: 10pt,
+  author-font-size: 18pt,
+  font-size: 9pt,
   body,
 ) = {
 
@@ -42,6 +42,9 @@
       #context counter(page).display()
     ]
   )
+
+  // Global list indentation and spacing
+  set list(indent: 1em, spacing: 0.85em)
 
   // Link styles
   show link: underline
@@ -178,11 +181,12 @@
   location: "",
 ) = {
   generic-two-by-two(
-    top-left: strong(title),
-    top-right: dates,
-    bottom-left: company,
-    bottom-right: emph(location),
+    top-left: strong(company),  // Changed from strong(title) to emph(title)
+    top-right: location,
+    bottom-left: emph(title),
+    bottom-right: emph(dates),
   )
+  v(.1em)  // Add small vertical space after work entries
 }
 
 #let project(
@@ -241,7 +245,7 @@
   year: "",
   url: "",
 ) = pad(
-  bottom: -4pt,  
+  bottom: -3pt,  
   [
     #par(hanging-indent: 20pt)[
       #if url != "" {
@@ -260,19 +264,27 @@
   date: "",
   url: "",
 ) = pad(
-  bottom: 6pt,
+  bottom: -3pt,  
   [
-    #par(hanging-indent: 14pt)[
-      *#title*. #event#if location != "" {
+    #par(hanging-indent: 20pt)[
+      #event#if location != "" {
         [, #location]
-      }#if date != "" {
-        [, #date]
-      }#if url != "" {
+      }, "#title", #date#if url != "" {
         [ #link(url)[#url]]
-      }.
+      }
     ]
   ]
 )
 
-#let skills(skills: ()) = skills.join(", ")
+// Updated skills function to handle categories with vertical spacing
+#let skills(categories: (), line-spacing: 0.3em) = {
+  for (i, category) in categories.enumerate() {
+    let (label, items) = category
+    [*#label:* #items.join(", ")]
+    // Add vertical spacing between categories (except after the last one)
+    if i < categories.len() - 1 {
+      v(line-spacing)
+    }
+  }
+}
 
