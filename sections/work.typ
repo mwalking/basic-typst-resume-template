@@ -6,10 +6,10 @@
 #work(
   company: "San Diego Gas & Electric",
   location: "San Diego, CA", 
-  title: "Senior Research Analyst",
+  title: "Data Scientist",
   dates: "2022 - Present",
 )
-- *Design, implement and deploy machine learning models* including unsupervised clustering to segment 500k+ customers for targeted rate programs, time series forecasting for daily call volume prediction, and predictive models for customer rate plan outreach.
+- *Design, implement and deploy machine learning models* including unsupervised clustering to segment 500k+ customers for targeted rate programs, time series forecasting for daily call volume prediction, and deploy interative Marimo notebooks exploring EV adoption modeling.
 - *Build automated data pipelines* leveraging AWS services (Glue, Athena, Lambda, Bedrock) to scrape and query data across multiple databases and apply large language models for text analysis projects helping to automate manual tasks.
 - *Ensure data quality and statistical rigor* across survey projects; design sampling methodologies, create survey weights, and conduct statistical significance testing, calculate confidence intervals.
 - *Drive technical excellence and standardization* across SDG&E's data science initiatives; define best practices for data science workflows, establish coding standards, and develop internal data science training programs and documentation as senior team member.
