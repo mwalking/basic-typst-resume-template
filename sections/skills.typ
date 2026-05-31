@@ -4,10 +4,10 @@
 
 #skills(
     categories: (
-("Languages", ("Python", "R", "SQL (SQLite, PostgreSQL)", "Cypher")),
-("Libraries", ("Pandas", "NumPy", "scikit-learn", "TensorFlow", "PyTorch", "Tidyverse", "XGBoost", "Tidymodels", "Hugging Face", "ggplot2", "Plotly")),
-("Tools", ("AWS (S3, EC2, Lambda, Glue, Bedrock, SageMaker, Athena)", "GitHub", "Linux", "Chalice", "LangChain", "CloudWatch", "SAP", "Marimo", "DataBricks")),
-("Data Science", ("Clustering", "Predictive Modeling", "Time Series (Prophet, ARIMA)", "A/B Testing", "Causal Inference", "NLP", ))
+("Languages", ("Python", "R", "SQL")),
+("Libraries", ("Pandas", "Polars", "NumPy", "scikit-learn", "XGBoost", "LangChain", "Plotly")),
+("Tools", ("AWS (S3, Lambda, Glue, Bedrock, SageMaker, Athena)", "Git", "Linux", "Marimo", "Databricks")),
+("Methods", ("NLP/Text Classification", "LLMs & Prompt Engineering", "Clustering", "Predictive Modeling", "Time Series", "Significance Testing & Sampling", "A/B Testing", "Causal Inference"))
 ),
   line-spacing: -0.6em
 )

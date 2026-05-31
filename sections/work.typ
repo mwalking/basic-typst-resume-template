@@ -9,11 +9,11 @@
   title: "Data Scientist",
   dates: "2022 - Present",
 )
-- *Design, implement and deploy machine learning models* including unsupervised clustering to segment 500k+ customers for targeted rate programs, time series forecasting for daily call volume prediction, and deploy interative Marimo notebooks exploring EV adoption modeling.
-- *Build automated data pipelines* leveraging AWS services (Glue, Athena, Lambda, Bedrock) to scrape and query data across multiple databases and apply large language models for text analysis projects helping to automate manual tasks.
-- *Ensure data quality and statistical rigor* across survey projects; design sampling methodologies, create survey weights, and conduct statistical significance testing, calculate confidence intervals.
-- *Drive technical excellence and standardization* across SDG&E's data science initiatives; define best practices for data science workflows, establish coding standards, and develop internal data science training programs and documentation as senior team member.
-- *Mentor and train junior staff* on statistical methods, data science, and machine learning techniques.
+- *Built and deployed production ML models* driving customer targeting and operational decisions; developed eligibility prediction models using ensemble methods with imputation for incomplete data, and unsupervised clustering to segment 500k+ customers into actionable cohorts for program enrollment — increasing targeting precision for a multi-million dollar rate assistance program.
+- *Owned end-to-end EV analytics strategy* from data acquisition through stakeholder delivery; combined 5+ public and internal datasets to build equity-focused gap analysis identifying underserved communities, characterized customer usage patterns for infrastructure planning, and shipped interactive dashboards used by cross-functional teams across planning, policy, and marketing.
+- *Designed and deployed a serverless internal data platform* enabling self-service analytics across the organization; built an API layer serving query results from a centralized data lake to BI tools and internal applications, with authentication, rate limiting, and automated data refresh pipelines.
+- *Developed LLM-powered automation tools* reducing manual work and enabling new analyses; built a pipeline mapping 1,000+ job roles to standardized occupation codes using structured LLM output with validation and human-in-the-loop review, powering an executive dashboard for workforce planning; automated open-ended survey summarization and text classification workflows that replaced weeks of manual analyst effort.
+- *Led technical standards and mentorship* as senior individual contributor; authored internal developer documentation, built a reusable analytics component library, established coding and workflow standards adopted team-wide, and mentored junior staff on statistical methods and ML techniques.
 
 #work(
   company: "Pew Research Center",
@@ -21,11 +21,10 @@
   title: "Research Analyst I & II",
   dates: "2020 - 2022",
 )
-- *Developed survey sampling methodologies* including a 100k+ journalist sampling frame using automated web scraping techniques; designed and implemented data collection frameworks for nationwide surveys on media consumption and demographics.
-- *Conducted advanced statistical analysis* on survey and observational data using R; built regression models, automated inter-coder reliability scripts, and performed significance testing to validate research findings.
-- *Led cross-functional data projects* coordinating with Census Bureau and Bureau of Labor Statistics; integrated multiple government datasets to analyze employment trends, presented the findings to media industry stakeholders, and contributed to policy discussions.
-- *Managed end-to-end data science projects* from design through delivery; supervised data coding workflows, created data visualizations and statistical summaries, and translated complex findings into accessible insights for lay audiences.
-- *Published research findings* in high-impact reports and articles; authored multiple publications on media consumption trends, misinformation, and newsroom employment that were cited in major news outlets and referenced in congressional hearings.
+- *Built large-scale data collection pipelines* including a 100k+ sampling frame of U.S. journalists using automated web scraping; designed stratified sampling methodologies and weighting schemes for nationwide surveys on media consumption reaching millions of readers.
+- *Conducted statistical analysis on survey and observational data* using R; built regression models, automated quality measurement pipelines for inter-coder reliability, and applied significance testing and confidence intervals to validate research findings across 10+ published studies.
+- *Led cross-functional data partnerships* with the Census Bureau and Bureau of Labor Statistics; integrated multiple government datasets to quantify newsroom employment trends, presented findings to industry stakeholders, and contributed analysis cited in congressional hearings.
+- *Translated complex analytical findings into accessible narratives* for non-technical audiences; authored first-author publications on media trends and misinformation that reached millions of readers and were cited by major national news outlets.
 
 #work(
   company: "Pew Research Center",
@@ -33,7 +32,6 @@
   title: "Research Assistant I & II",
   dates: "2017 - 2020",
 )
-- *Lead research assistant* for international survey projects across Western Europe; developed data documentation and data pipelines to process multi-language survey data and generate standardized reports for cross-country comparisons.
-- *Executed and designed qualitative research* managing 15 focus groups across 3 U.S. cities for year-long media perception study; analyzed transcripts using structured coding schemas and extracted actionable insights that informed subsequent survey design.
-- *Coordinated  flagship analytical publication* the annual State of the News Media Report; integrated audience metrics, economic datasets, and industry data from multiple data sources to create comprehensive market analysis reaching thousands of annual readers.
-- *Oversaw quality assurance processes* for research operations including fact-checking protocols, data validation frameworks, and editorial workflows; trained and supervised junior staff on statistical analysis and data processing procedures.
+- *Managed multi-country survey data pipelines* for international research projects across Western Europe; built standardized data processing workflows to harmonize multi-language survey data and generate cross-country comparison reports.
+- *Designed and executed mixed-methods research* including 15 focus groups across 3 U.S. cities analyzing unstructured qualitative feedback on media perceptions; developed structured coding schemas to extract themes and actionable insights that directly informed subsequent quantitative survey design.
+- *Coordinated the annual State of the News Media Report* — Pew's flagship industry analysis; integrated audience metrics, economic datasets, and industry data from multiple sources to produce comprehensive market analysis reaching thousands of stakeholders annually.
